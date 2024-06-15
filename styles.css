@@ -1,0 +1,569 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: url('background_img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.navigation {
+    background-color: lightgray;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.navigation nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation nav ul li a {
+    color: gray;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation nav ul li a:hover, a.home-button, a.hotels-button, a.login-button, a.profile-button {
+    background-color: white;
+}
+
+/* hotels */
+.hotels-listing {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.hotel h2 {
+    margin: 30px auto;
+    font-size: 25px;
+}
+
+.hotels {
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.hotel-image-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.hotel img {
+    margin-left: 50px;
+    max-width: 400px;
+}
+
+.hotel-content {
+    flex-grow: 1;
+    margin-right: 50px;
+}
+
+.hotel-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.hotel p {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+.hotel a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hotel a:hover {
+    background-color: gray;
+}
+
+/* booking */
+.booking-form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.booking-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.success {
+    color: green;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form label {
+    font-weight: bold;
+}
+
+.booking-form input[type="date"],
+.booking-form select {
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.booking-form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.booking-form button:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 20px;
+}
+
+/* login/register */
+.auth-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.auth-forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.auth-forms > div {
+    flex: 1;
+}
+
+.auth-forms h2 {
+    margin-bottom: 20px;
+}
+
+.auth-forms input[type="text"],
+.auth-forms input[type="email"],
+.auth-forms input[type="password"],
+.auth-forms button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.auth-forms button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-forms button:hover {
+    background-color: gray;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.or::before,
+.or::after {
+    content: '';
+    flex: 1;
+    border-top: 1px solid gray;
+}
+
+.or::before {
+    margin-right: 10px;
+}
+
+.or::after {
+    margin-left: 10px;
+}
+
+/* profile */
+.profile-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.profile-container h2 {
+    margin-bottom: 20px;
+}
+
+.profile-form, .password-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+}
+
+.profile-form label, .password-container label {
+    text-align: left;
+}
+
+.password-container label {
+    padding-top: 15px;
+}
+
+.profile-form input[type="text"],
+.profile-form input[type="email"],
+.profile-form input[type="password"] {
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.profile-form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.profile-form button:hover {
+    background-color: gray;
+}
+
+/* change password */
+.password-field {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.password-toggle {
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+/* home */
+.home-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.greeting h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+.slider-container {
+    padding: 40px;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 15px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+/* search */
+.search-bar {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-bar form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-bar input[type="text"],
+.search-bar button {
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: gray;
+}
+
+.search-results-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.search-results-container h2 {
+    margin: 20px 20px;
+    font-size: 25px;
+}
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-hotel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.found-image-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.search-hotel img {
+    margin-left: 50px;
+    max-width: 400px;
+}
+
+.hotel-found {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.hotel-found h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.hotel-found p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.hotel-found a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hotel-found a:hover {
+    background-color: gray;
+}
+
+.not-found p {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* featured hotels */
+.featured-hotels {
+    margin-top: 30px;
+}
+
+.featured-hotels h2 {
+    margin-bottom: 20px;
+}
+
+.hotels-lists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.hotels-list {
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hotels-list h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.hotels-list:hover {
+    background-color: #f0f0f0;
+}
+
+.hotel-branches {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    z-index: 1000;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.hotels-list:hover .hotel-branches {
+    display: block;
+    opacity: 1;
+}
+
+.hotels-list {
+    position: relative;
+    text-align: center;
+}
+
+.hotel-branches ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hotel-branches ul li {
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hotel-branches a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.hotel-branches p {
+    text-align: left;
+}
+
+.hotel-branches ul li img {
+    width: 170px;
+    height: 100px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.hotel-branches ul li:hover {
+    background-color: #f0f0f0;
+}
